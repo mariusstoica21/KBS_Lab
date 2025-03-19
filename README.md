@@ -10,7 +10,7 @@
 
 - ▶️ Ontology Pizza: https://www.youtube.com/watch?v=l0PZhqmTwfM&list=PL6DEHvciXKeUx4P32B3hKMK1t6mC8RhsW
 
-## 🔗 Pizza Ontology Guide
+## 📜 Pizza Ontology Guide
 
 In order to learn the main concepts of ontologies, the guide written by Michael DeBillis will be used.
 
