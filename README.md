@@ -12,12 +12,10 @@
 
 ## 🔗 Pizza Ontology Guide
 
-In order to learn the main concepts of ontologies (classes, sublasses, object properties, data properties, restrictions, rules, queries), the guide written by Michael DeBillis will be used.
+In order to learn the main concepts of ontologies, the guide written by Michael DeBillis will be used.
 
 Here you can find the post by Michael DeBillis on his site: https://www.michaeldebellis.com/post/protegetutorialyoutubeplaylist
 
-The guide is saved into: https://github.com/mariusstoica21/KBS_Lab/tree/main/files
-
-[Contribution guidelines for this project](https://github.com/mariusstoica21/KBS_Lab/tree/main/files)
+Comments that contains relevant pieces of information regarding certain concepts were added to the guide. The edited guide can be found [here](https://github.com/mariusstoica21/KBS_Lab/blob/main/files/Protege5_New_OWL_Pizza_Tutorial_V3.2.pdf)
 
 
