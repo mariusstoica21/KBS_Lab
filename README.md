@@ -18,12 +18,12 @@ Comments that contains relevant pieces of information regarding certain concepts
 
 ## ➕ Comments
 
-The guide was updated to include two types of comments: definition comments and info comments. These comments aim to provide additional information about KBS concepts.
+The guide was updated to include two types of comments: **definition comments** and **info comments**. These comments aim to provide additional information about KBS concepts.
 
 <div align="center">
   <img 
     src="https://github.com/mariusstoica21/KBS_Lab/blob/main/images/comments.PNG"
-    width="800"
+    width="900"
     height="auto"
     alt="Fig. 1 - Type of comments"
   >
