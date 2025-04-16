@@ -1,0 +1,11 @@
+{
+	"nodes":[
+		{"id":"94aedc9b58340c57","x":-100,"y":-300,"width":300,"height":140,"type":"text","text":"# Laboratory 1\nAre used as a blueprint/model."},
+		{"id":"de7411122b09beaa","type":"text","text":"# Course content\nThese are the laboratories\n","x":-520,"y":-60,"width":280,"height":140},
+		{"id":"a0647e8d921bdf62","x":240,"y":-360,"width":400,"height":160,"type":"file","file":"Lab 1 - Introduction/What is an ontology.md"}
+	],
+	"edges":[
+		{"id":"d3abe918784f0481","fromNode":"de7411122b09beaa","fromSide":"right","toNode":"94aedc9b58340c57","toSide":"left"},
+		{"id":"218fa45875f4666c","fromNode":"94aedc9b58340c57","fromSide":"right","toNode":"a0647e8d921bdf62","toSide":"left"}
+	]
+}
