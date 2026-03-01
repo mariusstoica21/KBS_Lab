@@ -1,6 +1,6 @@
 <p align="left">
   <img 
-    src="https://github.com/mariusstoica21/KBS_Lab/blob/main/images/cover.png"  
+    src="https://github.com/mariusstoica21/KBS_Lab/blob/main/Images/cover.png"  
   >
 </p>
 
@@ -13,7 +13,7 @@
 
 To learn the main concepts of ontologies, we will use the guide written by Michael DeBellis.
 You can find Michael DeBellis’s post on his website here: https://www.michaeldebellis.com/post/protegetutorialyoutubeplaylist.
-You can also access the guide here: [here](https://github.com/mariusstoica21/KBS_Lab/blob/main/files/Protege5_New_OWL_Pizza_Tutorial_V3.2.pdf)
+You can also access the guide here: [here](https://github.com/mariusstoica21/KBS_Lab/blob/main/Files/Protege5_New_OWL_Pizza_Tutorial_V3.2.pdf)
 
 ## ➕ Protege installation process
 
