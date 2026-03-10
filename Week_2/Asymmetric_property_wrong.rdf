@@ -1,0 +1,33 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns="http://example.org/university#"
+     xml:base="http://example.org/university"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#">
+
+    <owl:Ontology rdf:about="http://example.org/university"/>
+
+    <!-- Classes -->
+
+    <owl:Class rdf:about="#Professor"/>
+    <owl:Class rdf:about="#Student"/>
+
+    <!-- Object property with domain and range -->
+
+    <owl:ObjectProperty rdf:about="#isSupervisorOf">
+        <rdfs:domain rdf:resource="#Professor"/>
+        <rdfs:range rdf:resource="#Student"/>
+    </owl:ObjectProperty>
+
+    <!-- Individuals -->
+
+    <owl:NamedIndividual rdf:about="#Marius"/>
+    <owl:NamedIndividual rdf:about="#AdrianGroza"/>
+
+    <!-- "Wrong direction" assertion -->
+
+    <owl:NamedIndividual rdf:about="#Marius">
+        <isSupervisorOf rdf:resource="#AdrianGroza"/>
+    </owl:NamedIndividual>
+
+</rdf:RDF>

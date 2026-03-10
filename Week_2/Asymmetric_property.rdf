@@ -1,0 +1,32 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns="http://example.org/university#"
+     xml:base="http://example.org/university"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#">
+
+    <owl:Ontology rdf:about="http://example.org/university"/>
+
+    <!-- Classes -->
+    <owl:Class rdf:about="#Professor"/>
+    <owl:Class rdf:about="#Student"/>
+
+    <!-- Asymmetric Object Property -->
+    <owl:ObjectProperty rdf:about="#isSupervisorOf">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AsymmetricProperty"/>
+        <rdfs:domain rdf:resource="#Professor"/>
+        <rdfs:range rdf:resource="#Student"/>
+    </owl:ObjectProperty>
+
+    <!-- Individuals -->
+    <owl:NamedIndividual rdf:about="#AdrianGroza">
+        <rdf:type rdf:resource="#Professor"/>
+        <isSupervisorOf rdf:resource="#Marius"/>
+    </owl:NamedIndividual>
+
+    <owl:NamedIndividual rdf:about="#Marius">
+        <rdf:type rdf:resource="#Student"/>
+        <isSupervisorOf rdf:resource="#AdrianGroza"/>
+    </owl:NamedIndividual>
+
+</rdf:RDF>

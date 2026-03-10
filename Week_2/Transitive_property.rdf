@@ -1,0 +1,46 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns="http://example.org/university#"
+     xml:base="http://example.org/university"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#">
+
+<owl:Ontology rdf:about="http://example.org/university"/>
+
+<!-- Classes -->
+
+<owl:Class rdf:about="#Course"/>
+
+<!-- Transitive Object Property -->
+
+<owl:ObjectProperty rdf:about="#hasPrerequisite">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#TransitiveProperty"/>
+    <rdfs:domain rdf:resource="#Course"/>
+    <rdfs:range rdf:resource="#Course"/>
+</owl:ObjectProperty>
+
+<!-- Individuals -->
+
+<owl:NamedIndividual rdf:about="#IntroProgramming">
+    <rdf:type rdf:resource="#Course"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#DataStructures">
+    <rdf:type rdf:resource="#Course"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#ArtificialIntelligence">
+    <rdf:type rdf:resource="#Course"/>
+</owl:NamedIndividual>
+
+<!-- Prerequisite relations -->
+
+<owl:NamedIndividual rdf:about="#ArtificialIntelligence">
+    <hasPrerequisite rdf:resource="#DataStructures"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#DataStructures">
+    <hasPrerequisite rdf:resource="#IntroProgramming"/>
+</owl:NamedIndividual>
+
+</rdf:RDF>
