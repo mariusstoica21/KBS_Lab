@@ -1,0 +1,45 @@
+<?xml version="1.0"?>
+<rdf:RDF
+    xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+    xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+    xmlns:owl="http://www.w3.org/2002/07/owl#"
+    xmlns:uni="http://example.org/university#"
+    xml:base="http://example.org/university">
+
+    <owl:Ontology rdf:about="http://example.org/university"/>
+
+    <!-- Classes -->
+    <owl:Class rdf:about="http://example.org/university#University"/>
+    <owl:Class rdf:about="http://example.org/university#Person"/>
+
+    <!-- Functional object property -->
+    <owl:ObjectProperty rdf:about="http://example.org/university#hasRector">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="http://example.org/university#University"/>
+        <rdfs:range rdf:resource="http://example.org/university#Person"/>
+    </owl:ObjectProperty>
+
+    <!-- Individuals -->
+    <owl:NamedIndividual rdf:about="http://example.org/university#UBB">
+        <rdf:type rdf:resource="http://example.org/university#University"/>
+        <uni:hasRector rdf:resource="http://example.org/university#Ana"/>
+        <uni:hasRector rdf:resource="http://example.org/university#Mihai"/>
+    </owl:NamedIndividual>
+
+    <owl:NamedIndividual rdf:about="http://example.org/university#Ana">
+        <rdf:type rdf:resource="http://example.org/university#Person"/>
+    </owl:NamedIndividual>
+
+    <owl:NamedIndividual rdf:about="http://example.org/university#Mihai">
+        <rdf:type rdf:resource="http://example.org/university#Person"/>
+    </owl:NamedIndividual>
+
+    <!-- Explicitly state they are different -->
+    <owl:AllDifferent>
+        <owl:distinctMembers rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://example.org/university#Ana"/>
+            <rdf:Description rdf:about="http://example.org/university#Mihai"/>
+        </owl:distinctMembers>
+    </owl:AllDifferent>
+
+</rdf:RDF>
