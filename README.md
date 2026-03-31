@@ -28,4 +28,54 @@ You can also access the guide here: [here](https://github.com/mariusstoica21/KBS
 9. Open the extracted folder (and any subfolders) until you find Protege.exe.
 10. Double-click Protege.exe to start the program.
 
+## Laboratory
 
+### Week 1: Introduction into ontologies
+#### Concepts
+- Ontology
+- Class
+- Object property
+- Data property
+- Individual
+- T-Box
+- A-Box
+
+**Pages:** 1–29 *(only exercises)*
+
+---
+
+### Week 2: Object properties (part 1)
+####  Concepts
+- **Object properties**
+  - Transitivity
+  - Reflexivity
+  - Symmetry
+
+**Pages:** 29–47 *(only exercises, excluding “Probe Inconsistency Checking”)*
+
+---
+
+### Week 3: Object properties (part 2)
+####  Concepts
+- **Object properties**
+  - Functional
+  - Inverse functional
+- **Restrictions**
+  - Existential restriction
+  - Universal restriction
+  - Value restriction
+  - Cardinality restriction
+- IRI vs Namespace vs Label
+
+**Pages:** 47–61 *(only exercises)*
+
+---
+
+### Week 4: Automated import of ontologies and Protege web application
+####  Concepts
+- Cellfie
+- WebProtege
+
+**Pages:**
+- **Cellfie:** [Grocery Tutorial](https://github.com/protegeproject/cellfie-plugin/wiki/Grocery-Tutorial) *(only exercises)*
+- **WebProtege:** Pages 83–87 *(only exercises)*
