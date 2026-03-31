@@ -28,7 +28,7 @@ You can also access the guide here: [here](https://github.com/mariusstoica21/KBS
 9. Open the extracted folder (and any subfolders) until you find Protege.exe.
 10. Double-click Protege.exe to start the program.
 
-## Laboratory
+## 📄 Laboratory
 
 ### Week 1: Introduction into ontologies
 #### Concepts
