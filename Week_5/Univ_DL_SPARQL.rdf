@@ -1,0 +1,142 @@
+<?xml version="1.0"?>
+<rdf:RDF
+    xmlns="http://example.org/university#"
+    xml:base="http://example.org/university"
+    xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+    xmlns:owl="http://www.w3.org/2002/07/owl#"
+    xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#">
+
+    <owl:Ontology rdf:about="http://example.org/university"/>
+
+    <!-- ===================== -->
+    <!-- CLASSES -->
+    <!-- ===================== -->
+
+    <owl:Class rdf:about="#Student"/>
+    <owl:Class rdf:about="#Professor"/>
+    <owl:Class rdf:about="#Course"/>
+    <owl:Class rdf:about="#Country"/>
+    <owl:Class rdf:about="#Grade"/>
+
+    <owl:Class rdf:about="#MasterStudent">
+        <rdfs:subClassOf rdf:resource="#Student"/>
+    </owl:Class>
+
+    <owl:Class rdf:about="#HighGrade">
+        <rdfs:subClassOf rdf:resource="#Grade"/>
+    </owl:Class>
+
+    <!-- RomanianStudent ≡ Student AND (hasCountry value Romania) -->
+    <owl:Class rdf:about="#RomanianStudent">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="#Student"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="#hasCountry"/>
+                        <owl:hasValue rdf:resource="#Romania"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+    </owl:Class>
+
+    <!-- GoodStudent ≡ Student AND (hasGrade some HighGrade) -->
+    <owl:Class rdf:about="#GoodStudent">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="#Student"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="#hasGrade"/>
+                        <owl:someValuesFrom rdf:resource="#HighGrade"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+    </owl:Class>
+
+    <!-- ===================== -->
+    <!-- PROPERTIES -->
+    <!-- ===================== -->
+
+    <owl:ObjectProperty rdf:about="#hasCountry">
+        <rdfs:domain rdf:resource="#Student"/>
+        <rdfs:range rdf:resource="#Country"/>
+    </owl:ObjectProperty>
+
+    <owl:ObjectProperty rdf:about="#enrolledIn">
+        <rdfs:domain rdf:resource="#Student"/>
+        <rdfs:range rdf:resource="#Course"/>
+    </owl:ObjectProperty>
+
+    <owl:ObjectProperty rdf:about="#hasGrade">
+        <rdfs:domain rdf:resource="#Student"/>
+        <rdfs:range rdf:resource="#Grade"/>
+    </owl:ObjectProperty>
+
+    <owl:ObjectProperty rdf:about="#teaches">
+        <rdfs:domain rdf:resource="#Professor"/>
+        <rdfs:range rdf:resource="#Course"/>
+    </owl:ObjectProperty>
+
+    <!-- ===================== -->
+    <!-- INDIVIDUALS -->
+    <!-- ===================== -->
+
+    <!-- Countries -->
+    <owl:NamedIndividual rdf:about="#Romania">
+        <rdf:type rdf:resource="#Country"/>
+    </owl:NamedIndividual>
+
+    <owl:NamedIndividual rdf:about="#Germany">
+        <rdf:type rdf:resource="#Country"/>
+    </owl:NamedIndividual>
+
+    <!-- Courses -->
+    <owl:NamedIndividual rdf:about="#AI_Course">
+        <rdf:type rdf:resource="#Course"/>
+    </owl:NamedIndividual>
+
+    <owl:NamedIndividual rdf:about="#ML_Course">
+        <rdf:type rdf:resource="#Course"/>
+    </owl:NamedIndividual>
+
+    <!-- Grades -->
+    <owl:NamedIndividual rdf:about="#Grade10">
+        <rdf:type rdf:resource="#HighGrade"/>
+    </owl:NamedIndividual>
+
+    <owl:NamedIndividual rdf:about="#Grade7">
+        <rdf:type rdf:resource="#Grade"/>
+    </owl:NamedIndividual>
+
+    <!-- Students -->
+    <owl:NamedIndividual rdf:about="#Alice">
+        <rdf:type rdf:resource="#MasterStudent"/>
+        <hasCountry rdf:resource="#Romania"/>
+        <enrolledIn rdf:resource="#AI_Course"/>
+        <hasGrade rdf:resource="#Grade10"/>
+    </owl:NamedIndividual>
+
+    <owl:NamedIndividual rdf:about="#Bob">
+        <rdf:type rdf:resource="#Student"/>
+        <hasCountry rdf:resource="#Germany"/>
+        <enrolledIn rdf:resource="#ML_Course"/>
+        <hasGrade rdf:resource="#Grade7"/>
+    </owl:NamedIndividual>
+
+    <owl:NamedIndividual rdf:about="#Charlie">
+        <rdf:type rdf:resource="#Student"/>
+        <hasCountry rdf:resource="#Romania"/>
+        <enrolledIn rdf:resource="#ML_Course"/>
+        <hasGrade rdf:resource="#Grade10"/>
+    </owl:NamedIndividual>
+
+    <!-- Professor -->
+    <owl:NamedIndividual rdf:about="#ProfSmith">
+        <rdf:type rdf:resource="#Professor"/>
+        <teaches rdf:resource="#AI_Course"/>
+    </owl:NamedIndividual>
+
+</rdf:RDF>
