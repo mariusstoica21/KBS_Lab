@@ -71,11 +71,14 @@ You can also access the guide here: [here](https://github.com/mariusstoica21/KBS
 
 ---
 
-### Week 4: Automated import of ontologies and Protege web application
+### Week 10: Ontology alignment
 ####  Concepts
-- Cellfie
-- WebProtege
+- Add new ontology to already imported ontology
+- Align the new ontology
 
-**Pages:**
-- **Cellfie:** [Grocery Tutorial](https://github.com/protegeproject/cellfie-plugin/wiki/Grocery-Tutorial) *(only exercises)*
-- **WebProtege:** Pages 83–87 *(only exercises)*
+**Steps:**
+  1. Import the original ontology: https://github.com/mariusstoica21/KBS_Lab/blob/main/Week_10/PizzaTutorialWithDataV2.owl
+  2. Go to "Active ontology", click "Direct Imports" and add the new ontology: https://github.com/mariusstoica21/KBS_Lab/blob/main/Week_10/FoodOntology.owl
+  3. Run the query from https://github.com/mariusstoica21/KBS_Lab/blob/main/Week_10/SPARQL_Query.txt in **Snap SPARQL**.  
+
+---
