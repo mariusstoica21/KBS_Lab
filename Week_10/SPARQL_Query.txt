@@ -1,0 +1,8 @@
+PREFIX pizza: <http://www.semanticweb.org/pizzatutorial/ontologies/2020/PizzaTutorial#>
+PREFIX food: <http://www.example.org/food-ontology#>
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+
+SELECT ?pizzaInstance
+WHERE {
+  ?pizzaInstance rdf:type pizza:Pizza .
+}

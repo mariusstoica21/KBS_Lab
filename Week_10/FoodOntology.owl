@@ -1,0 +1,25 @@
+@prefix food: <http://www.example.org/food-ontology#> .
+@prefix pizza: <http://www.semanticweb.org/pizzatutorial/ontologies/2020/PizzaTutorial#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+
+<http://www.example.org/food-ontology> rdf:type owl:Ontology .
+
+food:FoodItem rdf:type owl:Class .
+food:PizzaFood rdf:type owl:Class .
+food:Drink rdf:type owl:Class .
+food:Dessert rdf:type owl:Class .
+
+food:PizzaFood rdfs:subClassOf food:FoodItem .
+food:Drink rdfs:subClassOf food:FoodItem .
+food:Dessert rdfs:subClassOf food:FoodItem .
+
+# Alignment with your Pizza ontology
+food:PizzaFood owl:equivalentClass pizza:Pizza .
+
+# Instances
+food:FoodPizza1 rdf:type food:PizzaFood .
+food:FoodPizza2 rdf:type food:PizzaFood .
+food:Cola1 rdf:type food:Drink .
+food:Tiramisu1 rdf:type food:Dessert .
